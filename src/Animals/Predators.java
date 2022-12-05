@@ -2,6 +2,8 @@ package Animals;
 
 import Transport.ValidateUtil;
 
+import java.util.Objects;
+
 public class Predators extends Mammals {
 
     private final String typeOfFood;
@@ -47,5 +49,20 @@ public class Predators extends Mammals {
         return super.toString() + "Predators{" +
                 "typeOfFood='" + typeOfFood + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        super.equals(o);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Predators predators = (Predators) o;
+        return Objects.equals(typeOfFood, predators.typeOfFood);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), typeOfFood);
     }
 }

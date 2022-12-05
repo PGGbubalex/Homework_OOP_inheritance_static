@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Objects;
+
 public class Flying extends Birds {
 
     private final String typeOfMovement;
@@ -44,5 +46,20 @@ public class Flying extends Birds {
         return super.toString() + "Flying{" +
                 "typeOfMovement='" + typeOfMovement + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        super.equals(o);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Flying flying = (Flying) o;
+        return Objects.equals(typeOfMovement, flying.typeOfMovement);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), typeOfMovement);
     }
 }

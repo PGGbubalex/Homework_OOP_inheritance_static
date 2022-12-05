@@ -2,6 +2,8 @@ package Animals;
 
 import Transport.ValidateUtil;
 
+import java.util.Objects;
+
 public class Flightless extends Birds {
 
     private final String typeOfMovement;
@@ -48,5 +50,20 @@ public class Flightless extends Birds {
         return super.toString() + "Flightless{" +
                 "typeOfMovement='" + typeOfMovement + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        super.equals(o);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Flightless that = (Flightless) o;
+        return Objects.equals(typeOfMovement, that.typeOfMovement);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), typeOfMovement);
     }
 }
