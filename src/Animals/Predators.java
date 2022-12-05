@@ -14,27 +14,28 @@ public class Predators extends Mammals {
     }
 
     public void hunt() {
+        System.out.println("охотится на животных");
 
     }
 
     @Override
     public void walk() {
-
+        System.out.println("Бегает");
     }
 
     @Override
     public void eat() {
-
+        System.out.println("ест мясо");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("спит");
     }
 
     @Override
     public void move() {
-
+        System.out.println("ходит по земле");
     }
 
     public String getTypeOfFood() {

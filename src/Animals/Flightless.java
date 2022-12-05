@@ -15,27 +15,28 @@ public class Flightless extends Birds {
     }
 
     public void walk() {
-
+        System.out.println("Ходит пешком");
     }
 
     @Override
     public void eat() {
+        System.out.println("Ест насекомых");
 
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("Спит");
     }
 
     @Override
     public void move() {
-
+        System.out.println("Перемещается по земле");
     }
 
     @Override
     public void hunt() {
-
+        System.out.println("охотится на насекомых");
     }
 
     public String getTypeOfMovement() {

@@ -56,18 +56,31 @@ public class Test {
         Predators tiger = new Predators("Тигр", 5, "Джунгли", 30, "Мясо");
         Predators bear = new Predators("Медведь", 10, "Лес", 40, "Всеядный");
         System.out.println(hyena);
+        hyena.eat();
+        hyena.hunt();
+        hyena.move();
+        hyena.walk();
+        hyena.sleep();
         System.out.println(tiger);
         System.out.println(bear);
 
         Amphibians frog = new Amphibians("Лягушка", 1, "Озера");
         Amphibians alreadyFreshwater = new Amphibians("Уж пресноводный", 1, "Озера");
         System.out.println(frog);
+        frog.eat();
+        frog.move();
+        frog.walk();
+        frog.sleep();
         System.out.println(alreadyFreshwater);
 
         Flightless peacock = new Flightless("Павлин", 2, "Джунгли", "Ходьба");
         Flightless penguin = new Flightless("Пингвин", 4, "Южный Полюс", "Ходьба");
         Flightless dodoBird = new Flightless("Птица додо", 5, "Острова Маврикий", "Ходьба");
         System.out.println(peacock);
+        peacock.eat();
+        peacock.hunt();
+        peacock.move();
+        peacock.walk();
         System.out.println(dodoBird);
         System.out.println(penguin);
 
@@ -75,6 +88,11 @@ public class Test {
         Flying albatross = new Flying("Альбатрос", 4, "Побережья", "Полет");
         Flying falcon = new Flying("Сокол", 6, "Степи", "Полет");
         System.out.println(seagull);
+        seagull.eat();
+        seagull.fly();
+        seagull.move();
+        seagull.hunt();
+        seagull.sleep();
         System.out.println(albatross);
         System.out.println(falcon);
     }

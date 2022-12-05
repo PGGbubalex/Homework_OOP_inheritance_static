@@ -20,22 +20,22 @@ public class Amphibians extends Animals {
 
 
     public void walk() {
-
+        System.out.println("Плавает в воде");
     }
 
     @Override
     public void eat() {
-
+        System.out.println("ест насекомых");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("спит");
     }
 
     @Override
     public void move() {
-
+        System.out.println("плавает");
     }
 
     @Override
